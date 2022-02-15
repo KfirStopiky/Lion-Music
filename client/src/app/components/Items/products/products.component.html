@@ -1,0 +1,119 @@
+<div class="container">
+  <div class="details-container">
+    <h1
+      *ngIf="_ShoppingService.category == 'ElectricGuitars'"
+      class="category-name"
+    >
+      {{ "Electric Guitars" }}
+    </h1>
+    <h1
+      *ngIf="_ShoppingService.category == 'AcousticGuitars'"
+      class="category-name"
+    >
+      {{ "Acousitc Guitars" }}
+    </h1>
+    <h1
+      *ngIf="_ShoppingService.category == 'BassGuitars'"
+      class="category-name"
+    >
+      {{ "Bass Guitars" }}
+    </h1>
+    <h1 *ngIf="_ShoppingService.category == 'Orchestral'" class="category-name">
+      {{ "Orchestral" }}
+    </h1>
+    <h1
+      *ngIf="_ShoppingService.category == 'Drums&Percussion'"
+      class="category-name"
+    >
+      {{ "Drums & Percussion" }}
+    </h1>
+    <h1
+      *ngIf="_ShoppingService.category == 'DJEquipment'"
+      class="category-name"
+    >
+      {{ "DJ Equipment" }}
+    </h1>
+    <h1
+      *ngIf="_ShoppingService.category == 'Pianos&Keyboards'"
+      class="category-name"
+    >
+      {{ "Pianos & Keyboards" }}
+    </h1>
+    <p class="details" *ngIf="_ShoppingService.category == 'ElectricGuitars'">
+      Lion Music proud to offer a massive selection of Electric Guitars in all
+      shapes and sizes. Whether you are a seasoned player <br />
+      looking for your dream guitar, or a beginner just learning to play, we've
+      got an Electric Guitar to suit your taste, style and budget. <br />
+      <br />
+      Here you'll find our range of Solid-Body and Semi-Hollowbody Guitar
+      styles, as well as our top picks for Beginners, Premium & Custom Shop
+      Models, Left-Handed Electric Guitars and Extended Range Guitars if you
+      need that extra versatility from a 7, 8 or 9-String model.
+    </p>
+    <p class="details" *ngIf="_ShoppingService.category == 'AcousticGuitars'">
+      Acoustic Guitars are used in most types of music worldwide, and for this
+      reason, the acoustic guitar is widely regarded as one of the most popular
+      musical instruments. Used on a wide variety of music types, you will often
+      hear its sound gracing many genres from rock to folk, country to jazz.
+      Here at PMT, we have one of the largest selections of acoustic guitars for
+      sale in the UK from the worlds leading brands including Taylor, Martin
+      guitars, Gibson, Epiphone, Fender and more.
+    </p>
+    <p class="details" *ngIf="_ShoppingService.category == 'BassGuitars'">
+      Bass Guitars are similar to electric guitars, but are more often found
+      with four thicker strings, and a longer neck. However, there are many
+      popular variations: some modern players prefer 5, 6 or even 7-string
+      basses, and short-scale models are perfect for bassists with smaller hands
+      (including children) and guitarists who also play bass but want a more
+      familiar feel than that of a standard-scale bass. Lion MusicOnline offers
+      hundred of different models to suit your needs, with FREE Next Day
+      Delivery on all items worth over £99 and in stock, or you can also Reserve
+      & Collect from any of our Lion MusicStores nationwide.
+    </p>
+    <p class="details" *ngIf="_ShoppingService.category == 'Orchestral'">
+      Our orchestral instruments are selected by in-house experts. Browse
+      strings, brass, woodwind, and orchestral percussion. You’ll find the most
+      sought-after brands like Stentor, Yamaha, and Buffet Crampon, as well as
+      our LionMusic range. From violins and cellos to trumpets, saxophones, and
+      more, there’s something for everyone. Plus, our affordable student
+      instruments are great for schools, orchestras, and ensembles.
+    </p>
+    <p class="details" *ngIf="_ShoppingService.category == 'Drums&Percussion'">
+      The Lion Music 'House of Drums' is your one-stop shop for all Acoustic and
+      Electric Drum Kits, Cymbals, drum hardware, drumsticks, drum cases, drum
+      hardware bags, drumheads and drum accessories. Whether you need beginner
+      drums, intermediate drums or a professional drum kit we have drum
+      equipment for all skill levels and budgets. We stock a wide range of drum
+      products from the worlds biggest names including TourTech, Paiste, Mapex,
+      Vic Firth, Natal, Yamaha, Protection Racket, Vater, Evans, Promark,
+      Puresound, Zildjian, Tama, Aquarian, Gretsch, Drum Workshop, Latin
+      Percussion, British Drum Company, Keo Percussion, Remo, Pearl, Sabian,
+      Roland, Ludwig, Alesis, Meinl, and Sonor.
+    </p>
+    <p class="details" *ngIf="_ShoppingService.category == 'Pianos&Keyboards'">
+      Pianos and Keyboards are some of the most popular instruments in the
+      world. Each of our stores stock a massive range of home digital pianos,
+      stage pianos, synthesizers and MIDI Keyboards. All keyboards and pianos in
+      stock over £99 are eligible for FREE Next Day Delivery. You can also
+      Reserve & Collect your keyboard from our Lion Music Stores nationwide!
+    </p>
+
+    <p class="details" *ngIf="_ShoppingService.category == 'DJEquipment'">
+      DJ Equipment is the bread & butter of any DJ, it includes all the gear
+      that's essential for any serious DJ: Decks, DJ Mixers, DJ Controllers and
+      DJ Effects. If you fancy becoming the next David Guetta or the next Calvin
+      Harris, you'd better be well-equipped, so check out our excellent
+      selection of all the best DJ gear we have for sale!
+    </p>
+  </div>
+  <mat-divider class="divider"></mat-divider>
+  <div class="products-conatainer">
+    <div
+      *ngFor="let product of _ShoppingService.productsByCategory"
+      class="products"
+    >
+      <app-product-item [product]="product"></app-product-item>
+    </div>
+  </div>
+  <mat-divider class="divider"></mat-divider>
+</div>

@@ -1,0 +1,121 @@
+<div class="container">
+  <div
+    class="main-showFooter-container"
+  >
+    <div class="cf">
+      <img
+        class="bottom"
+        src="https://www.uniqlo.com/eu/en/news/topics/2019061701/img/mimg_1_m.jpg"
+        alt=""
+      />
+      <img
+        class="top"
+        src="https://wallpaperaccess.com/full/1586645.jpg"
+        alt=""
+      />
+    </div>
+    <div class="popular-brands-container">
+      <div class="header">
+        <h1 class="popular-brands-header">POPULAR BRANDS</h1>
+      </div>
+      <div class="popular-brands-logos">
+        <div class="fender">
+          <img
+            src="https://www.pmtonline.co.uk/media/wysiwyg/Fender_3_1.png"
+            alt="Fender logo"
+          />
+        </div>
+        <div class="gibson">
+          <img
+            src="https://www.pmtonline.co.uk/media/wysiwyg/Gibson_1.png"
+            alt="Gibson logo"
+          />
+        </div>
+        <div class="yamahaa">
+          <img
+            src="https://www.pmtonline.co.uk/media/wysiwyg/Yamaha_1.png"
+            alt="Yamahaa logo"
+          />
+        </div>
+        <div class="roland">
+          <img
+            src="https://www.pmtonline.co.uk/media/wysiwyg/Roland_5.png"
+            alt="Roland logo"
+          />
+        </div>
+        <div class="taylor">
+          <img
+            src="https://www.pmtonline.co.uk/media/wysiwyg/Taylor_1.png"
+            alt="Taylor logo"
+          />
+        </div>
+        <div class="tourtech">
+          <img
+            src="https://www.pmtonline.co.uk/media/wysiwyg/TourTech_100_1_1.png"
+            alt="Tourtech logo"
+          />
+        </div>
+        <div class="moog">
+          <img
+            src="https://www.pmtonline.co.uk/media/wysiwyg/Moog_100_1.png"
+            alt="Moog logo"
+          />
+        </div>
+        <div class="martin">
+          <img
+            src="https://www.pmtonline.co.uk/media/wysiwyg/Martin_1.png"
+            alt="Martin logo"
+          />
+        </div>
+      </div>
+      <mat-divider class="divider"></mat-divider>
+    </div>
+    <h1 class="new-releases-header">NEW RELEASES</h1>
+    <div class="new-products-conatainer">
+      <div *ngFor="let new of _ShoppingService.newReleases">
+        <app-new-releases [new]="new"></app-new-releases>
+      </div>
+    </div>
+
+    <div class="additional-information-container">
+      <div class="additional-information">
+        <h1>About Lion Music</h1>
+        <p>
+          Launched in 2003 and now with over 1.3 million registered customers,
+          LionMusic.com is a leading retailer of musical instruments and music
+          equipment. You can buy music gear from orchestral instruments to rock
+          'n' roll, including guitars, drum kits, digital pianos, saxophones and
+          cellos, plus leading recording and studio equipment. <br /><br />
+          From starter guitars to pro microphones and amps, the LionMusic.com
+          online music shop has a huge range of music equipment available.
+          Whether you're looking for a violin, keyboard, electronic drum kit or
+          PA system, we can help. <br /><br />
+          We've got some of the biggest brands in stock, including Yamaha,
+          Roland, Casio, Fender, Ibanez, Alesis, Behringer & Gibson, as well as
+          our own great value LionMusic product range. <br /><br />
+          To receive excellent service and a great price on your next musical
+          instrument purchase, try us now!
+        </p>
+      </div>
+      <div class="additional-information">
+        <h1>Music News</h1>
+        <p>
+          The Line 6 HX Stomp XL is Here Line 6’s new HX Stomp XL expands the
+          popular HX Stomp with five more footswitches. This new “super
+          stompbox” promises Helix-quality sounds in a compact and
+          pedalboard-friendly unit.<br />
+          <span class="date">{{ firstNewsDate | date }}</span> <br /><br />
+          Home recording made simple with Shure MOTIV microphones Want to make
+          high-quality recordings at home, but don’t know where to start? Look
+          no further than the Shure MOTIV range – a collection of user-friendly
+          microphones designed for budding creatives. <br />
+          <span class="date">{{secondNewsDate | date}}</span> <br /><br />
+          Top 11 Violin Cases to Suit Your Style Want a protective violin case
+          that looks good too? We’ve put together our top 11 cases that will
+          keep your violin safe while also adding to your style. <br />
+          <span class="date">{{thirdNewsDate | date}}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

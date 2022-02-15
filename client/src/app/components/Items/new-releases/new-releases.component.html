@@ -1,0 +1,37 @@
+<div class="container">
+  <mat-card class="item-card">
+    <span class="just-landed">JUST LANDED</span>
+    <img class="item-image" src="{{ new.product_images[0] }}" alt="img" />
+    <img
+      class="logo"
+      src="https://static.thenounproject.com/png/23287-200.png"
+      alt="hand-logo"
+    />
+    <div class="item-name-container">
+      <h3 (click)="goToSelectedItem(new._id)" class="item-name">
+        {{ new.product_name }}
+      </h3>
+    </div>
+    <h3 class="item-price">{{ new.product_price | number: "2.2" }} $</h3>
+    <div *ngIf="_AuthService.currentUser.isAdmin" class="icons-container">
+      <div class="edit-icon-container">
+        <img
+        (click)="openAdminEditDialog(new._id)"
+          matTooltip="EDIT"
+          class="edit-icon"
+          src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Editardados.png"
+          alt="edit icon"
+        />
+      </div>
+      <div class="delete-icon-container">
+        <span
+          (click)="openDeleteWarningDialog(new._id)"
+          class="material-icons"
+          matTooltip="DELETE"
+        >
+          delete
+        </span>
+      </div>
+    </div>
+  </mat-card>
+</div>
