@@ -4,11 +4,11 @@
     "description": "",
     "script":{
         "start":"nodemon",
-        "test":"test"
     },
     "dev": "concurrently \"npm run backend\" \"npm run client\"",
     "engines": {
-        "node": "14.17.0"
+        "node": "14.17.0",
+        "npm":"6.14.13"
     },
     "dependencies": {
         "dotenv": "^16.0.0"
