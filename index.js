@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 8080;
+const port = 8080;
 const cors = require("cors");
 const connect_to_mongo_server = require("./dbConfig");
 
@@ -23,5 +23,4 @@ app.use("/product", require("./Routes/products.routes"));
 app.use("/recipt", require("./Routes/recipt.routes"));
 
 app.listen(port, () => console.log(`Server is Up & Running on port ${port}`));
-
 module.exports = app;
